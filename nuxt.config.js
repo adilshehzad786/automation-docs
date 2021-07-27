@@ -5,7 +5,7 @@ export default theme({
     primaryColor: '#E24F55',
     target: 'static',
     router: {
-      base: 'https://adilshehzad786.github.io/automation-docs'
+      base: 'https://adilshehzad786.github.io/automation-docs/'
     }
   }
 })
