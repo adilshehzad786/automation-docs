@@ -1,0 +1,10 @@
+{
+  "title": "Automation documentation ",
+  "url": "adilshehzad786.github.io/automation-docs",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "https://github.com/adilshehzad786/automation-docs",
+  "twitter": "@nuxt_js"
+}
