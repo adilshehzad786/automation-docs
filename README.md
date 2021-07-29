@@ -1,27 +1,33 @@
-# automationdocs
+# Website
 
-## Setup
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-Install dependencies:
+## Installation
 
-```bash
+```console
 yarn install
 ```
 
-## Development
+## Local Development
 
-```bash
-yarn dev
+```console
+yarn start
 ```
 
-## Static Generation
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-This will create the `dist/` directory for publishing to static hosting:
+## Build
 
-```bash
-yarn generate
+```console
+yarn build
 ```
 
-To preview the static generated app, run `yarn start`
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-For detailed explanation on how things work, checkout [nuxt/content](https://content.nuxtjs.org) and [@nuxt/content theme docs](https://content.nuxtjs.org/themes-docs).
+## Deployment
+
+```console
+GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
