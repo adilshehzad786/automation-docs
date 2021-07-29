@@ -1,16 +1,15 @@
 {
-  "name": "automation-docs",
+  "name": "automationdocs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "start": "nuxt start",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxt/content-theme-docs": "^0.10.1",
-    "nuxt": "^2.15.2",
-    "push-dir": "^0.4.1"
+    "nuxt": "^2.15.2"
   }
 }

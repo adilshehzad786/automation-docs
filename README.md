@@ -1,4 +1,4 @@
-# automation-docs
+# automationdocs
 
 ## Setup
 
