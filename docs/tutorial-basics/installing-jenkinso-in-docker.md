@@ -22,8 +22,32 @@ docker container run -d -p 8356:8080 -v jenkinsvol1:/var/jenkins_home --name jen
 
 ```
 
+
+## Executing the docker Image 
+
+```
+docker exec -it jenkins-local /bin/bash
+```
+
 ## Administartor Password
 
 ```
 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
+
+![alt text](/img/jenkins.png "Jenkins")
+
+
+
+* Click on the Custom Plugin to Install Plugins. 
+* Create your Username 
+* Configure the Jenkins to the Default local Address
+
+```
+localhost:8356
+```
+* Click on Start Using Jenkins
+
+
+![alt text](/img/jenkinshome.png "Jenkins")
