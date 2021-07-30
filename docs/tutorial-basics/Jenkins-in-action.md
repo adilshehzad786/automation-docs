@@ -32,3 +32,52 @@ got to "Manage Jenkins" --> "Configure Global Security" --> Under CSRF Protectio
 * Now run you add the Git Link to jenkins source management.
 
 ### Adding Username and Password
+
+Now Click on the Add button which is available in the Credentials 
+
+- in the username opton type your Github or Gitlab username . 
+
+- for the password you need to generate the Token from the GitHub settings
+
+- Go to the [GitHub Setting](https://github.com/settings)
+
+- then go the Developer settings
+
+- Now click on the Peronal Access token 
+
+- Create your token , and paste the token to the Jenkins Credentials
+
+- Now use your GitHub Credentials on the Jenkins
+
+- Enter the branch name where you deployed the whole project
+
+### Build
+
+- Click onthe Add build step 
+- and click on the execute shell 
+
+_we will use bash here for the jenkins automation_
+
+The script sample would be look like this 
+
+```bash
+#!bin/bash
+
+/usr/bin/python3.7 -m venv v1
+source "v1/bin/activate"
+pip install -r requirements.txt
+
+/usr/bin/python3.7 -m unittest test_mainpy.py
+
+the bash scripts would be vary with respective to the python script
+```
+### Final Output 
+
+![alt text](/img/success.png "Python")
+
+
+### Received Email from Selenium 
+
+![alt text](/img/email.png "Python")
+
+
