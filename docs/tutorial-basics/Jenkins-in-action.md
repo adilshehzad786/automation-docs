@@ -65,12 +65,13 @@ The script sample would be look like this
 
 /usr/bin/python3.7 -m venv v1
 source "v1/bin/activate"
-pip install -r requirements.txt
+/usr/bin/python3.7 -m pip install -r requirements.txt
 
 /usr/bin/python3.7 -m unittest test_mainpy.py
 
-the bash scripts would be vary with respective to the python script
+
 ```
+_the bash scripts would be vary with respective to the python script_
 ### Final Output 
 
 ![alt text](/img/success.png "Python")
