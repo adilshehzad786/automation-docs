@@ -14,3 +14,5 @@ Let's discover **Automation Using Container**.
 * Docker
 * Jenkins 
 * Bash
+
+![alt text](/img/Selenium.png "Selenium")
