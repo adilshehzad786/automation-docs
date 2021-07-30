@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installing Python
 
-## How to Install Python to Linux Machine
+## How to Install Python to Linux Machine & Containers
 
 - Update the Packages
 
