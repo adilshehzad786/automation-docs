@@ -1,6 +1,6 @@
 ---
 title : Jenkins in Action
-sidebar_position: 4
+sidebar_position: 6
 ---
 ### Creating New Jenkins Job
 
