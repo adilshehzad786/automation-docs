@@ -22,13 +22,24 @@ docker container run -d -p 8356:8080 -v jenkinsvol1:/var/jenkins_home --name jen
 
 ```
 
+## Administrator Password
+
+```
+docker exec -itu root {containerName} passwd
+
+```
 
 ## Executing the docker Image 
 
 ```
 docker exec -it jenkins-local /bin/bash
 ```
+## Root Mode 
 
+```
+su 
+
+```
 ## Administartor Password
 
 ```
@@ -51,3 +62,23 @@ localhost:8356
 
 
 ![alt text](/img/jenkinshome.png "Jenkins")
+
+_**You can refer to the this for the [Python Installation](/docs/tutorial-basics/installing-python) in the Jenkins-local container.**_
+
+
+<h4 class="alert" > Here are some tips 
+<ul>
+<li>
+You can execute the commands without using sudo 
+</li>
+
+<li>
+use the apt update command before installing python to the docker container
+</li>
+
+<li>
+you can execute the python version using /usr/bin/python3.7
+</li>
+
+</ul>
+</h4>

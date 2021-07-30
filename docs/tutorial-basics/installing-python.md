@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Installing Python
@@ -50,3 +50,27 @@ or
 **_ Incase if you are facing Python package not found then use the update command first before installing Python_**
 
 ![alt text](/img/python.png "Python")
+
+## Installation of Python Venv
+
+```
+apt-get install python3-venv
+
+```
+
+## Installing PIP 
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install python3-pip
+
+```
+
+## Checking PIP 
+
+```
+/usr/bin/python3.7 -m pip --version
+```
