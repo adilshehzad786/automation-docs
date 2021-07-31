@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'DevOps Automation Docs - Systems Limited',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'An Official Documentation for the Automation Department ',
   url: 'https://automationdocs.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -81,13 +81,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/adilshehzad786/automation-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/adilshehzad786/automation-docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

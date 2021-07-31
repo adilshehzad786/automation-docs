@@ -3,36 +3,42 @@ import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
+  
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'Python',
+    Svg: require('../../static/img/tutorial/15774175881551942290.svg').default,
+    
+  },
+
+  {
+    title: 'Selenium',
+    Svg: require('../../static/img/tutorial/14773475701551942825.svg').default,
+    
+  },
+
+  {
+    title: 'ChromeDriver',
+    Svg: require('../../static/img/tutorial/656295881586787936.svg').default,
+    
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Docker',
+    Svg: require('../../static/img/tutorial/12099885771536233213.svg').default,
+    
+  },
+  
+  {
+    title: 'Jenkins',
+    Svg: require('../../static/img/tutorial/jenkins-icon.svg').default,
+    
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Azure',
+    Svg: require('../../static/img/tutorial/20154405451536130220.svg').default,
+    
   },
+
+  
 ];
 
 function Feature({Svg, title, description}) {
