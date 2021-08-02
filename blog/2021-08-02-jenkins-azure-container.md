@@ -214,5 +214,111 @@ wget  https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
 ### Uncompress the binaries
 
 ```
-tar -zxvf
+tar -zxvf Python-3.9.0.tgz
 ```
+
+### Installating the Software properties common 
+
+Before installting the Software Properties common update the container first
+
+```
+apt update
+
+```
+
+```
+apt install software-properties-common
+```
+
+### Installation of Zlib 
+
+```
+apt-get install zlib1g-dev
+```
+
+### Build Essentials
+
+```
+apt-get install build-essential
+```
+### Navigating to the Permanent Storage
+
+```
+cd jenkins_home
+
+```
+
+### Making Directory 
+
+```
+mkdir python3.9
+```
+Now you need to go to the Python Extract file because from the Python-3.9.0 file we will install the python to the jenkins_home/python3.9
+
+### Navigating to the Python Directory
+
+```
+cd Python-3.9.0
+
+```
+
+## Configure Python Installation to Specific Directory 
+
+```
+./configure --prefix=/var/jenkins_home/python3.9
+```
+### Compile and install
+
+```
+
+make
+```
+
+```
+make install
+```
+
+### Verification
+
+```
+/var/jenkins_home/python3.9/bin/python3.9 --version
+
+```
+### Installing OPENSSH
+
+```
+curl https://www.openssl.org/source/openssl-1.0.2o.tar.gz | tar xz
+
+```
+
+```
+cd openssl-1.0.2o
+```
+
+```
+./config shared --prefix=/var/jenkins_home/python3.9
+```
+
+```
+make
+```
+
+```
+make install
+
+```
+
+
+### Installing PIP
+
+
+```
+apt-get install python3-pip
+
+```
+
+## Google Chrome Installation
+
+
+
+
