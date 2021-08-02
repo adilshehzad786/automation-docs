@@ -60,9 +60,81 @@ or you can refer to this [official documentation](https://docs.microsoft.com/en-
 
 ![alt text](/img/resource.png "Resource ")
 
+* When the resource Group will be created , now you need to create a container inside your resource group . 
+
+_**Please make sure the Container region is same as your ResourceGroup Region because it will provide low latency .**_
+
+* Click on Create and then go to the Storage Account , and then click on the Create Button.
+
+![alt text](/img/storage.png "Resource ")
+
+* Review and Create your Container Storage.
+
+* Now go to the Resource and then on the left side Go to the Azure File
+
+* Now we need to create the file share 
+
+![alt text](/img/fileshare.png "Resource ")
+
+* Now we need the Access keys to access the Container Storage
+
+* Go to the Security + networking , in the security and networking go to the access keys.
+
+the access key look like this 
+
+**Storage Account Name**
+```
+dockerjenkinstorage
 
 ```
+**key1**
+
+```
+WUEnOiglxPOtIrg2xF/PB+WOxjjshshsuugegechcbjcvjcbeuheiuhuigwwygwgw==
+
+```
+
+```
+
 
 az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
 
 ```
+
+**The command will be look like this one**
+
+
+```
+
+
+az container create --resource-group jenkins-docker --name jenkins-local --image jenkins/jenkins:lts --dns-name-label jenkinsdocker100 --ports 8080 50000 --azure-file-volume-account-name dockerjenkinstorage --azure-file-volume-account-key WUEnOiglxPOtIrg2xF/PB+WOxjjshshsuugegechcbjcvjcbeuheiuhuigwwygwgw== --azure-file-volume-share-name jenkinsfileshare1 --azure-file-volume-mount-path /var/jenkins_home
+
+```
+
+**Output**
+
+![alt text](/img/tutorial/output.PNG "Resource ")
+
+
+* Now go to your Resource Group , and inside the Resouce group , now you will have jenkins-local which is the Azure Container Instance.
+If you go to the container storage and in the container storage , go to the file share , you will see that the jenkins files will be stored in the volume instance. 
+
+_**Always make sure docker is that the container is mounted with the volume , otherwise the jenkins will not stored the data permantely.**_
+
+
+## Starting Jenkins Server
+
+The Jenkins will extract all the files in the File share which you attached with the help of the Azure file share.
+* Now go to the Container instances , and copy the public dns url .
+the url will look like this
+
+```
+http://jenkinsdocker100.eastus.azurecontainer.io
+```
+and jenkins will be working on the **port 8080**
+
+```
+http://jenkinsdocker100.eastus.azurecontainer.io:8080
+```
+
+* Now we need to copy  the 
