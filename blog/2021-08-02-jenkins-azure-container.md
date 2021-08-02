@@ -60,6 +60,7 @@ or you can refer to this [official documentation](https://docs.microsoft.com/en-
 
 ![alt text](/img/resource.png "Resource ")
 
+
 ```
 
 az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home

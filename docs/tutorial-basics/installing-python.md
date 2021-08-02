@@ -27,24 +27,24 @@ When prompted press **Enter** to continue:
 * When you added the Repository , You are good to go for the installation of the Python3.7
 
 ```
-sudo apt install python3.7
+sudo apt install python3.9
 ```
 
 * Check your Version 
 
 ```
-python3.7 --version
+python3.9 --version
 ```
 or you can try find the python using this command
 
 ```
-whereis python3.7 
+whereis python3.9
 
 ```
 or 
 
 ```
-/usr/bin/python3.7 --version
+/usr/bin/python3.9 --version
 ```
 
 **_ Incase if you are facing Python package not found then use the update command first before installing Python_**
@@ -72,5 +72,5 @@ sudo apt-get install python3-pip
 ## Checking PIP 
 
 ```
-/usr/bin/python3.7 -m pip --version
+/usr/bin/python3.9 -m pip --version
 ```
