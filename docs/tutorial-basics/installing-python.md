@@ -49,7 +49,6 @@ or
 
 **_ Incase if you are facing Python package not found then use the update command first before installing Python_**
 
-![alt text](/img/python.png "Python")
 
 ## Installation of Python Venv
 
@@ -74,3 +73,4 @@ sudo apt-get install python3-pip
 ```
 /usr/bin/python3.9 -m pip --version
 ```
+

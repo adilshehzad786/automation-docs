@@ -137,4 +137,82 @@ and jenkins will be working on the **port 8080**
 http://jenkinsdocker100.eastus.azurecontainer.io:8080
 ```
 
-* Now we need to copy  the 
+![alt text](/img/jenkins-2.png "Resource ")
+
+* Now we need to copy  the Settings which are availables on the left menu , in the settings go to the Containers.
+
+* In the container , go to the connect , and connect to the docker instance, through which we will get the adminstartor password for the jenkins server.
+
+**the command will be look like this**
+
+```
+cat /var/jenkins_home/secrets/initialAdminPassword
+
+```
+![alt text](/img/sandbox.png "Resource ")
+
+## Installing Jenkins Plugin 
+
+After geting the Jenkins Password, we need to install the jenkins plugins to our server. 
+
+* on the Customize Jenkins page , click on the installed suggested plugins
+
+![alt text](/img/plugins.png "Resource ")
+
+Incase of the Plugin Forbidden error then you need to restart the Jenkins server. 
+by using this command you can restart your jenkins server
+
+```
+http://jenkinsdocker100.eastus.azurecontainer.io:8080/restart
+
+```
+and press Yes to restart your Jenkins Server.
+
+## Create First Admin User
+
+You can add your details to create an admin user or you can also skip and go as an admin.
+
+## Instance Configuration
+
+Your instance will be run on the port 8080 , so save and finish the setting without changes anything.
+
+Yahoo ! Jenkins is now ready , now you can use your jenkins server.
+
+before creating our first job we need to install the python latest verion and google chrome to our file , so you need to go to the Settings -> Containers and connect with your container instance.
+
+## Navigation to the File Share
+
+**List Directories and files**
+
+```
+ls
+```
+**List directories , files and hidden files**
+
+```
+ls -a
+
+```
+ 
+**Navigation to the Directory**
+
+```
+cd var
+```
+![alt text](/img/ls.png "Resource ")
+
+
+## Installation of Python
+
+### Downloading python 
+
+```
+wget  https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+```
+![alt text](/img/downloadoython.png "Resource ")
+
+### Uncompress the binaries
+
+```
+tar -zxvf
+```
