@@ -307,8 +307,15 @@ You can check PIP is installed or not by the following command
 ```
 ![alt text](/img/pip.png "Resource ")
 
+### Installating VirtualENV
+
+```
+/var/jenkins_home/python/bin/python3.9 -m pip install virtualenv
+```
 ## Google Chrome Installation
 
+Refer to this [Setup](/docs/tutorial-basics/installing-google-chrome) to install Google chrome 
 
+## Jenkins Job
 
-
+Before starting the jenkins job , let verify the python and PIP Path
