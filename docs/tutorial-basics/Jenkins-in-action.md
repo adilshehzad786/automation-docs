@@ -79,6 +79,6 @@ _the bash scripts would be vary with respective to the python script_
 
 ### Received Email from Selenium 
 
-![alt text](/img/email.png "Python")
+![alt text](/img/Screenshot (21).png "Python")
 
 
