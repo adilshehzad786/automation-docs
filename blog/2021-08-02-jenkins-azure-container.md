@@ -204,17 +204,25 @@ cd var
 
 ## Installation of Python
 
+### Navigating to the Permanent Storage
+
+```
+cd jenkins_home
+
+```
+
 ### Downloading python 
 
 ```
-wget  https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+wget  https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
 ```
 ![alt text](/img/downloadoython.png "Resource ")
+
 
 ### Uncompress the binaries
 
 ```
-tar -zxvf Python-3.9.0.tgz
+tar -zxvf Python-3.9.6.tgz
 ```
 
 ### Installating the Software properties common 
@@ -241,17 +249,22 @@ apt-get install zlib1g-dev
 ```
 apt-get install build-essential
 ```
-### Navigating to the Permanent Storage
+### Installation of More Essentials
+```
+apt install libssl-dev
+apt install libncurses5-dev
+apt install libsqlite3-dev
+apt install libreadline-dev
+apt install libtk8.6
+apt install libgdm-dev
+apt install libdb4o-cil-dev
+apt install libpcap-dev
 
 ```
-cd jenkins_home
-
-```
-
 ### Making Directory 
 
 ```
-mkdir python3.9
+mkdir python
 ```
 Now you need to go to the Python Extract file because from the Python-3.9.0 file we will install the python to the jenkins_home/python3.9
 
@@ -265,7 +278,7 @@ cd Python-3.9.0
 ## Configure Python Installation to Specific Directory 
 
 ```
-./configure --prefix=/var/jenkins_home/python3.9
+./configure --prefix=/var/jenkins_home/python
 ```
 ### Compile and install
 
@@ -278,44 +291,21 @@ make
 make install
 ```
 
-### Verification
-
-```
-/var/jenkins_home/python3.9/bin/python3.9 --version
-
-```
-### Installing OPENSSH
-
-```
-curl https://www.openssl.org/source/openssl-1.0.2o.tar.gz | tar xz
-
-```
-
-```
-cd openssl-1.0.2o
-```
-
-```
-./config shared --prefix=/var/jenkins_home/python3.9
-```
-
-```
-make
-```
-
-```
-make install
-
-```
-
 
 ### Installing PIP
 
+```
+curl https://bootstrap.pypa.io/get-pip.py
+```
+```
+/var/jenkins_home/python/bin/python3.9 get-pip.py
+```
+You can check PIP is installed or not by the following command
 
 ```
-apt-get install python3-pip
-
+/var/jenkins_home/python/bin/python3.9 -m pip --version
 ```
+![alt text](/img/pip.png "Resource ")
 
 ## Google Chrome Installation
 
