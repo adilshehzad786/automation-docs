@@ -318,4 +318,37 @@ Refer to this [Setup](/docs/tutorial-basics/installing-google-chrome) to install
 
 ## Jenkins Job
 
-Before starting the jenkins job , let verify the python and PIP Path
+Before starting the jenkins job , let verify the python and PIP Path.
+
+to verify pip and python , i will use the following commands, as my python and pip installed in the Jenkins_home directory so my command will be look like this 
+
+```python
+/var/jenkins_home/python/bin/python3.9 --version
+```
+and PIP command will look like this 
+
+```python
+/var/jenkins_home/python/bin/python3.9 -m pip --version
+```
+
+after verifying ,  now its time to build our first Job , as i already discuss , how to build your own Jenkins , You can go to this [Setup](/docs/tutorial-basics/Jenkins-in-action).
+
+## Bash Script 
+
+I am improving the bash automation on daily basics, the the bash script will look like this 
+
+```bash
+#!/bin/bash
+/var/jenkins_home/python/bin/python3.9 -m venv v1
+source "/var/jenkins_home/workspace/SeleniumDarazJob/v1/bin/activate"
+/var/jenkins_home/python/bin/python3.9 -m pip install -r requirements.txt
+/var/jenkins_home/python/bin/python3.9 -m unittest test_mainpy.py
+
+```
+
+## Conclusion 
+
+As we learned , how to install jenkins , and use the python and Google chrome along with the chromedriver, so we can automate the process using serverless way . 
+You can send the pull request if you find any kind of bug . 
+
+
