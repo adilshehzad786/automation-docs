@@ -90,7 +90,22 @@ sidebar_position: 1
       }
     }
   ]
-}
+  
 
+
+
+
+```
+
+## Execute Command
+
+* Go to the powershell as an adminstrator
+
+* Save the ARM Template to the `deploy-aci.json` and make sure you remember the directory of the JSON file.
+
+* Execute the following command
+
+```
+az container create --resource-group myResourceGroup --file deploy-aci.yaml
 
 ```
