@@ -352,3 +352,7 @@ You can send the pull request if you find any kind of bug .
 
 ![alt text](/img/final.png "Resource ")
 
+
+### Mounted Multiple Volumes to Azure Container Instance Using Azure Resource Manager
+
+Refer to this [ARM Setup](docs/ARM-templates/arm-template-azure-container-multiple-mounted) for the Multiple Mount 
