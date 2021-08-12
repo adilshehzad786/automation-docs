@@ -293,7 +293,7 @@ make install
 
 
 ### Installing PIP
-
+PIP is a package management system used to install and manage software packages written in Python. ... PIP for Python is a utility to manage PyPI package installations from the command line. 
 ```
 curl https://bootstrap.pypa.io/get-pip.py
 ```
