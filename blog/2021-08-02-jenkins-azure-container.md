@@ -276,7 +276,7 @@ cd Python-3.9.6
 ```
 
 ## Configure Python Installation to Specific Directory 
-
+the path is not constant, so it can vary on your PC or VM virtual machine.
 ```
 ./configure --prefix=/var/jenkins_home/python
 ```
@@ -297,6 +297,7 @@ make install
 ```
 curl https://bootstrap.pypa.io/get-pip.py
 ```
+the path is not constant, so it can vary on your PC or VM virtual machine.
 ```
 /var/jenkins_home/python/bin/python3.9 get-pip.py
 ```
