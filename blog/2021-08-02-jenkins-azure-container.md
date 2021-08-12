@@ -281,7 +281,7 @@ cd Python-3.9.0
 ./configure --prefix=/var/jenkins_home/python
 ```
 ### Compile and install
-
+*The Linux make command is used to build and maintain groups of programs and files from the source code. In Linux, it is one of the most frequently used commands by the developers. It assists developers to install and compile many utilities from the terminal.
 ```
 
 make
