@@ -269,9 +269,9 @@ mkdir python
 Now you need to go to the Python Extract file because from the Python-3.9.0 file we will install the python to the jenkins_home/python3.9
 
 ### Navigating to the Python Directory
-
+* python directory is updated to 3.9.0 to 3.9.6 ,it will be change in feature so check the update on your implemention time kindly.
 ```
-cd Python-3.9.0
+cd Python-3.9.6
 
 ```
 
@@ -301,7 +301,6 @@ curl https://bootstrap.pypa.io/get-pip.py
 /var/jenkins_home/python/bin/python3.9 get-pip.py
 ```
 You can check PIP is installed or not by the following command
-
 ```
 /var/jenkins_home/python/bin/python3.9 -m pip --version
 ```
