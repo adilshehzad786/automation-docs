@@ -295,7 +295,7 @@ make install
 ### Installing PIP
 
 ```
-curl https://bootstrap.pypa.io/get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
 ```
 ```
 /var/jenkins_home/python/bin/python3.9 get-pip.py
