@@ -261,12 +261,17 @@ apt install libdb4o-cil-dev
 apt install libpcap-dev
 
 ```
+### Pandas Packages Installation
+
+```
+apt-get install libbz2-dev
+```
 ### Making Directory 
 
 ```
 mkdir python
 ```
-Now you need to go to the Python Extract file because from the Python-3.9.0 file we will install the python to the jenkins_home/python3.9
+All the python packages and files will be inside the python directory , now go back to the Python-3.9.0 and configure the installation to the Specific directory , the command is available below
 
 ### Navigating to the Python Directory
 The python directory is changed to 3.9.0 -3.9.6 ,so kindly update there changes according to the new version.
