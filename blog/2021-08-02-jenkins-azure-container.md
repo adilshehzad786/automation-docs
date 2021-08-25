@@ -227,14 +227,14 @@ apt-get install build-essential
 ```
 ### Installation of More Essentials
 ```
-apt install libssl-dev
-apt install libncurses5-dev
-apt install libsqlite3-dev
-apt install libreadline-dev
-apt install libtk8.6
-apt install libgdm-dev
-apt install libdb4o-cil-dev
-apt install libpcap-dev
+apt install -y libssl-dev
+apt install -y libncurses5-dev
+apt install -y libsqlite3-dev
+apt install -y libreadline-dev
+apt install -y libtk8.6
+apt install -y libgdm-dev
+apt install -y libdb4o-cil-dev
+apt install -y libpcap-dev
 
 ```
 ### Pandas Packages Installation
