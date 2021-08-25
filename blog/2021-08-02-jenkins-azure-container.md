@@ -97,19 +97,10 @@ WUEnOiglxPOtIrg2xF/PB+WOxjjshshsuugegechcbjcvjcbeuheiuhuigwwygwgw==
 ```
 
 
-az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
+az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --restart-policy Neve --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
 
 ```
 
-**The command will be look like this one**
-
-
-```
-
-
-az container create --resource-group jenkins-docker --name jenkins-local --image jenkins/jenkins:lts --dns-name-label jenkinsdocker100 --ports 8080 50000 --azure-file-volume-account-name dockerjenkinstorage --azure-file-volume-account-key WUEnOiglxPOtIrg2xF/PB+WOxjjshshsuugegechcbjcvjcbeuheiuhuigwwygwgw== --azure-file-volume-share-name jenkinsfileshare1 --azure-file-volume-mount-path /var/jenkins_home
-
-```
 
 **Output**
 
