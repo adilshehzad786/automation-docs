@@ -80,23 +80,8 @@ _**Please make sure the Container region is same as your ResourceGroup Region be
 
 * Go to the Security + networking , in the security and networking go to the access keys.
 
-the access key look like this 
-
-**Storage Account Name**
-```
-dockerjenkinstorage
 
 ```
-**key1**
-
-```
-WUEnOiglxPOtIrg2xF/PB+WOxjjshshsuugegechcbjcvjcbeuheiuhuigwwygwgw==
-
-```
-
-```
-
-
 az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --restart-policy Neve --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
 
 ```
