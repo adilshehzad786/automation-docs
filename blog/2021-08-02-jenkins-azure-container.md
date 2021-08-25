@@ -82,7 +82,7 @@ _**Please make sure the Container region is same as your ResourceGroup Region be
 
 
 ```
-az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --restart-policy Neve --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
+az container create --resource-group <resourceGroupName> --name <container-name> --image jenkins/jenkins:lts --restart-policy Never --dns-name-label <jenkins-dns-name> --ports 8080 50000 --azure-file-volume-account-name <azure-storage> --azure-file-volume-account-key <container-key> --azure-file-volume-share-name <azure-file-share-volume-name> --azure-file-volume-mount-path /var/jenkins_home
 
 ```
 
@@ -295,7 +295,38 @@ You can check PIP is installed or not by the following command
 ```
 ## Google Chrome Installation
 
-Refer to this [Setup](/docs/tutorial-basics/installing-google-chrome) to install Google chrome 
+Download the Google Chrome Package using Wget 
+
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+```
+and then update the azure container instance
+
+```
+apt-get update
+```
+and then installed the Google Chrome
+
+```
+apt install ./google-chrome-stable_current_amd64.deb
+```
+
+if you enter the command ```whereis google-chrome-stable``` it will return you ```/usr/bin/google-chrome-stable``` however this is non-persistent storage which Provided to you by the Microsoft Azure Container instance, however we can copy this binary to the Persistent storage volume folder and use in the Python Selenium code.
+
+You can copy the binary using this command
+
+```
+cp -R /opt/google/chrome /var/jenkins_home/google-chrome-stable
+```
+__make use you created the google-chrome-stable inside the jenkins_home which is our persistent storage.__
+
+and then add the line to your python code 
+
+```
+chrome_optionss.binary_location = '/var/jenkins_home/google-chrome-stable/chrome/google-chrome'
+```
+Please dont Stop , Restart or Terminate the Container Otherwise your Google Chrome will not be worked properly because , google chrome needed Linux Packages.
 
 ## Jenkins Job
 
@@ -320,10 +351,16 @@ I am improving the bash automation on daily basics, the the bash script will loo
 
 ```bash
 #!/bin/bash
-/var/jenkins_home/python/bin/python3.9 -m venv v1
-source "/var/jenkins_home/workspace/SeleniumDarazJob/v1/bin/activate"
+
+if [ ! -f /var/jenkins_home/workspace/KadeWeAutomations/chromedriver ]; then
+
+LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip && unzip chromedriver_linux64.zip   
+
+fi 
+
+
 /var/jenkins_home/python/bin/python3.9 -m pip install -r requirements.txt
-/var/jenkins_home/python/bin/python3.9 -m unittest test_mainpy.py
+/var/jenkins_home/python/bin/python3.9 -m unittest test_main.py
 
 ```
 
