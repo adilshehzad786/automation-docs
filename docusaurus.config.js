@@ -3,8 +3,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'DevOps Automation Docs - Systems Limited',
-  tagline: 'An Official Documentation for the Automation Department ',
+  title: 'DevOps Docs',
+  tagline: 'A DevOps Docs for the Everyone. Please Contribute so we can help everyone.',
   url: 'https://automationdocs.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -14,7 +14,7 @@ module.exports = {
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'DevOps Automation Docs',
+      title: 'DevOps Docs',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -66,7 +66,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Automation Department- Systems Limited`,
+      copyright: `Copyright © ${new Date().getFullYear()} Adil Shehzad`,
     },
     prism: {
       theme: lightCodeTheme,
